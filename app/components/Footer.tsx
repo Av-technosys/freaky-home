@@ -1,13 +1,14 @@
 import React from "react";
+import Logo from "../../public/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="  bg-white md:px-8 md:py-14 max-sm:p-3">
+    <footer className="w-full bg-white md:px-8 md:py-14 px-4 py-8 border-t border-gray-200">
       <div className=" flex flex-col lg:flex-row justify-between gap-10">
         <div className=" max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 ">
           <div>
             <img
-              src="/freeki-logo.png"
+              src={Logo.src}
               alt="Freaky Chimp"
               className="w-32 sm:w-36"
             />
