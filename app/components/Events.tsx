@@ -4,7 +4,7 @@ import { FileText, FolderOpen, Lightbulb, User } from "lucide-react";
 
 const Events = () => {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full z-20 flex justify-center">
       <div className="w-full max-w-7xl px-4">
         <div className="text-center mb-12 max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl font-bold">
