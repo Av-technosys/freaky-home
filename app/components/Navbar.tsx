@@ -39,9 +39,7 @@ export default function Navbar() {
                     <li className="text-white font-inter font-semibold text-[14px] leading-none tracking-[-0.02em] uppercase underline cursor-pointer hover:opacity-80 transition-opacity">
                         ABOUT US
                     </li>
-                    <li className="text-white font-inter font-semibold text-[14px] leading-none tracking-[-0.02em] uppercase underline cursor-pointer hover:opacity-80 transition-opacity">
-                        PRICING
-                    </li>
+                   
                     <li className="text-white font-inter font-semibold text-[14px] leading-none tracking-[-0.02em] uppercase underline cursor-pointer hover:opacity-80 transition-opacity">
                         CONTACT US
                     </li>

@@ -4,13 +4,13 @@ import { FileText, FolderOpen, Lightbulb, User } from "lucide-react";
 
 const Events = () => {
   return (
-    <div className="w-full z-20 flex justify-center">
+    <div className="w-full z-20  md:py-10 flex justify-center">
       <div className="w-full max-w-7xl px-4">
         <div className="text-center mb-12 max-w-5xl mx-auto">
-          <h1 className="text-3xl md:text-4xl font-bold">
+          <h1 className="text-3xl md:text-4xl max-sm:mt-5 font-bold">
             Manage Your Event Service With Ease
           </h1>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm text-gray-500 mt-4">
             Cryptocurrency adoption is at less than 1% of the global world
             population with some countries and entities actively fighting
             against its mass adoption and the smartest developers and nerds
