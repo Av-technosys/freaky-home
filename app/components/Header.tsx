@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="container mx-auto px-4 md:px-10 flex flex-col lg:flex-row items-center justify-between  relative z-10 max-sm:mt-[40%] sm:mt-[20%]  lg:mt-28">
+    <div className=" container mx-auto px-4 md:px-10 flex flex-col lg:flex-row items-center justify-between  relative z-10 max-sm:mt-[40%] sm:mt-[20%]  lg:mt-28">
 
       {/* LEFT CONTENT */}
       <div className="max-w-xl text-center lg:text-left mb-10 lg:mb-0">

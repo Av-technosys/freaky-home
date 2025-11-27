@@ -3,20 +3,48 @@
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import home_bg from "../public/assets/home_bg.png";
-import Image from "next/image";
+
+// import Events from "./components/Events";
+
+import OurEvent from "./components/OurEvent";
+import { ContactUs } from "./components/ContactUs";
+
+import FAQ from "./components/FAQ";
+
+import JoinUs from "./components/JoinUS";
+import WhoWe from "./components/WhoWe";
+import Image1 from "./components/Image1";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
+import Image from "next/image";
+import Cards from "./components/Cards";
+
+// export default function Home() {
+//   return (
+//     <div>
+
+//     {/* <Events/> */}
+//     <OurEvent/>
+//     <Testimonials/>
+//        <Image1/>
+//        <JoinUs/>
+//      <FAQ/>
+
+// <WhoWe/>
+//     <ContactUs/>
+
+//     </div>
+//   );
+// }
 
 export default function Home() {
   return (
-    <div className="relative w-full overflow-x-hidden">
-
+    <div className="relative  overflow-x-hidden max-w-7xl mx-auto ">
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative w-full md:min-h-[90vh] flex md:items-center pb-32">
-
+      <section className="relative  md:min-h-[250px] flex md:items-center  ">
         {/* Background Image */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none select-none z-0">
           <Image
@@ -28,8 +56,7 @@ export default function Home() {
         </div>
 
         {/* Foreground Content */}
-          <Header />
-
+        <Header />
       </section>
 
       {/* Add spacing before events */}
@@ -37,8 +64,18 @@ export default function Home() {
         <Events />
       </div>
 
+      <OurEvent />
+
+      <Cards/>
+      <Image1 />
+      <JoinUs />
+      <FAQ />
+
+      <WhoWe />
+      <ContactUs />
+
       {/* Footer full width */}
-      <div className="w-full mt-10">
+      <div className=" mt-10">
         <Footer />
       </div>
     </div>
