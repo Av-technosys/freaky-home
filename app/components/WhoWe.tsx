@@ -19,8 +19,8 @@ const WhoWe = () => {
         </p>
       
         <div className="flex gap-3">
-          <button className="px-10 py-1 border text-white rounded-sm ">Contact Us</button>
-         <button className="px-10 py-1 bg-white text-black rounded-sm ">Learn More</button>
+          <Button variant={"outline"} className=" text-white bg-transparent ">Contact Us</Button>
+         <Button className=" bg-white text-black hover:bg-gray-300  ">Learn More</Button>
 
         
         </div>

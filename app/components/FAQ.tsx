@@ -26,10 +26,12 @@ FAQ = () => {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 -space-y-5 ">
+    <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 mt-8 ">
       <div className="flex flex-col px-10 py-20 max-sm:py-8   max-sm:text-center  ">
         <h1 className=" text-4xl max-sm:text-2xl   font-bold ">
-          General <br className="max-sm:hidden"/> Questions
+          General 
+          <br className="max-sm:hidden"/> 
+          Questions
         </h1>
        
         <p className="mt-4 ">

@@ -17,7 +17,7 @@ import Image1 from "./components/Image1";
 import Events from "./components/Events";
 import Footer from "./components/Footer";
 import Image from "next/image";
-import Cards from "./components/Cards";
+import TestimonialCards from "./components/Cards";
 
 // export default function Home() {
 //   return (
@@ -39,6 +39,7 @@ import Cards from "./components/Cards";
 
 export default function Home() {
   return (
+    <>
     <div className="relative  overflow-x-hidden max-w-7xl mx-auto ">
       {/* Navbar */}
       <Navbar />
@@ -66,18 +67,16 @@ export default function Home() {
 
       <OurEvent />
 
-      <Cards/>
+      <TestimonialCards/>
       <Image1 />
       <JoinUs />
       <FAQ />
 
       <WhoWe />
       <ContactUs />
-
-      {/* Footer full width */}
-      <div className=" mt-10">
-        <Footer />
-      </div>
+ 
     </div>
+        <Footer /> 
+        </>
   );
 }

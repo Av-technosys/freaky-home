@@ -42,7 +42,7 @@ const testimonials = [
   },
 ];
 
-const Cards = () => {
+const TestimonialCards = () => {
   return (
     <div className="w-full flex justify-center">
       <div className="w-full max-w-7xl px-4 mt-25">
@@ -55,7 +55,7 @@ const Cards = () => {
           {testimonials.map((item, index) => (
             <Card
               key={index}
-              className="rounded-2xl shadow-md border bg-white p-6"
+              className="rounded-2xl shadow-md hover:shadow-lg duration-200 border bg-white p-6"
             >
               <CardContent className="p-0 flex flex-col gap-4">
 
@@ -97,4 +97,4 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default TestimonialCards;
