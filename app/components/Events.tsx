@@ -1,21 +1,17 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, FileText, FolderOpen, Lightbulb, User } from "lucide-react";
 import ButtonBg from "@/components/ButtonBg";
 
 const Events = () => {
   return (
     <div className="w-full z-20  md:py-10 flex justify-center">
-      <div className="w-full max-w-7xl px-4">
+      <div className="w-full max-w-7xl ">
         <div className="text-center mb-12 max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl max-sm:mt-5 font-bold">
-            Manage Your Event Service With Ease
+           Manage Your Event Services With Ease
+
           </h1>
           <p className=" max-w-2xl mx-auto text-center text-gray-500 mt-4">
-            Cryptocurrency adoption is at less than 1% of the global world
-            population with some countries and entities actively fighting
-            against its mass adoption and the smartest developers and nerds
-            holding the fort.
+           A powerful event management solution built to help businesses organize services, coordinate vendors, track schedules, and operate efficiently all from a single dashboard.
           </p>
         </div>
 
@@ -24,9 +20,11 @@ const Events = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <div className="border-2  md:col-span-2 group border-orange-300 rounded-2xl p-10 shadow-sm bg-white">
                 <h2 className=" text-xl md:text-3xl font-bold ">
-                  Management software that handles it all.
+                 All-in-One Event Management Software.
                 </h2>
-
+                <p className="text-gray-600 mt-4">
+                  Designed to handle every detail seamlessly.
+                </p>
                 <ButtonBg className=" cursor-pointer duration-100 px-6 py-5  mt-6"> 
                     SEE ALL FEATURES <ArrowRight className=" group-hover:-rotate-45 duration-100" />
 
@@ -37,8 +35,7 @@ const Events = () => {
                 <User size={30} />
                 <h3 className="text-xl font-semibold ">Easy Invoicing</h3>
                 <p className="text-gray-600 text-sm">
-                  Automate recurring invoices and save time by using pre-built
-                  templates. Get paid on time.
+                  Simplified invoicing designed for efficiency. Generate professional invoices, automate billing, and track payments seamlessly in one place.
                 </p>
               </div>
             </div>
@@ -52,21 +49,19 @@ const Events = () => {
                 <FolderOpen size={30} />
                 <h3 className="text-xl font-semibold mb-3">Manage Services</h3>
                 <p className="text-gray-600 text-sm">
-                  Snap and categorize receipts in seconds and link your bank
-                  account.
+                 A smarter way to manage your services. Upload receipts in seconds, organize costs efficiently, and maintain a clear overview of your event operations.
+
                 </p>
               </div>
 
              <div className="p-6 col-span-1 flex flex-col gap-1 items-start rounded-xl shadow-md bg-white">
-                <Lightbulb size={30
-                  
-                } />
+                <Lightbulb size={30} />
                 <h3 className="text-xl font-semibold mb-3 ">
                   Streamline Bookings
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Set up payroll and bonuses for all your employees, and never
-                  be late on salaries.
+                 A faster, smarter way to handle bookings - organize events, manage timelines, and coordinate services without confusion or delays.
+
                 </p>
               </div>
 
@@ -76,8 +71,7 @@ const Events = () => {
                   Complete Visibility
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  Get real-time visibility into every expense and payment, with
-                  a neat dashboard.
+                  A powerful overview of your entire event operation - monitor payments, expenses, and performance metrics in one easy-to-use dashboard.
                 </p>
               </div>
             </div>

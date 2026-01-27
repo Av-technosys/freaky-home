@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const JoinUs = () => {
   return (
-    <div className="max-w-6xl mx-auto relative rounded-2xl overflow-hidden "> 
+    <div className="max-w-7xl mx-auto relative rounded-2xl  py-6 overflow-hidden "> 
 
 
       <Image
@@ -16,12 +16,12 @@ const JoinUs = () => {
 
         <div className=" z-50 py-6 px-4 md:px-12  text-white flex flex-col justify-center gap-20">
           <h2 className="text-3xl max-sm:text-2xl font-bold  ">
-            Join us, Become a <br /> Vendor!
+Become a FreakyChimp 
+ <br /> Vendor!
           </h2>
           <div className="flex justify-between items-center gap-5">
             <p className="max-w-md text-lg sm:text-xl text-shadow-lg">
-              Thousands of vendors are using Eventors to showcase their services
-              and get more business than ever before.
+       Connect with clients, showcase your services, and take your business to the next level—just like thousands of vendors already doing it.
             </p>
             <ButtonBg className="px-6 py-3">
               Start Here

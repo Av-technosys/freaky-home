@@ -24,9 +24,10 @@ export const metadata: Metadata = {
 };
 
 const AboutUs = () => {
+  
   return (
     <>
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section id="contactUs" className="w-full py-16 md:py-12  md:mt-24 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-5xl mx-auto">
           {/* Heading */}
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">

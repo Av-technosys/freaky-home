@@ -5,93 +5,92 @@ import { IconStarFilled } from "@tabler/icons-react";
 
 const testimonials = [
   {
-    img: "01.png",
+    img: "",
     name: "Jane Doe",
-
-    text: "This product has completely transformed our workflow. The team is more productive, and the results are outstanding. Highly recommended!",
+    text: "FreakyChimp has completely transformed the way we organize events. Planning is effortless, coordination with vendors is seamless, and every celebration turns out flawless. Highly recommended!",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "",
     name: "John Smith",
-
-    text: "Incredible service and a fantastic product. It's rare to find a company that delivers on its promises so consistently. A five-star experience all around.",
+    text: "Incredible service and an outstanding platform. Planning events has never been easier - every detail is managed flawlessly, making each celebration stress-free and memorable.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "",
     name: "Emily White",
-
-    text: "A solid tool that does exactly what it promises. There was a bit of a learning curve, but their support team was incredibly helpful.",
+    text: "A fantastic tool for managing events. From vendor coordination to scheduling, everything is smooth, and the support team is very responsive.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "",
     name: "Aarav Mehta",
-
-    text: "The platform has streamlined our operations beautifully. Our team works faster, smarter, and more efficiently than ever before.",
+    text: "FreakyChimp has streamlined our event planning beautifully. Our team coordinates vendors, manages schedules, and executes events faster, smarter, and more efficiently than ever before.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "",
     name: "Riya Kapoor",
-
-    text: "Exceptional service and a game-changing product. The reliability and consistency we get from this tool is unmatched.",
+    text: "FreakyChimp delivers unmatched reliability and consistency, making every event perfectly organized from start to finish.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "",
     name: "Kabir Sharma",
-
-    text: "Super intuitive and well-designed. Took me a bit to explore all features, but once I did, the workflow became incredibly smooth.",
+    text: "FreakyChimp combines smart design with intuitive features, making event planning and execution effortless every time.",
   },
 ];
 
 const TestimonialCards = () => {
+  const sortedTestimonials = [...testimonials].sort(
+  (a, b) => b.text.length - a.text.length
+);
   return (
-    <div className="w-full flex justify-center">
-      <div className="w-full max-w-7xl px-4 mt-25">
-
-        <h1 className="text-4xl text-center max-sm:text-2xl font-bold font-serif">
-          What our customer <br /> says About Us
+    <div className="w-full   mx-auto py-6">
+      {/* Header */}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 max-sm:text-2xl mb-4">
+          What Our Customers Say
         </h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Don not just take our word for it - hear from our satisfied customers
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-          {testimonials.map((item, index) => (
-            <Card
-              key={index}
-              className="rounded-2xl shadow-md hover:shadow-lg duration-200 border bg-white p-6"
-            >
-              <CardContent className="p-0 flex flex-col gap-4">
+      {/* Testimonials Grid */}
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-start">
+          {sortedTestimonials.map((item, index) => (
+          <Card
+            key={index}
+            className="border-gray-200 hover:border-gray-300 transition-colors duration-200"
+          >
+            <CardContent className="pt-3">
+              {/* Stars */}
+              <div className="flex gap-1 mb-2">
+                {[...Array(5)].map((_, i) => (
+                  <IconStarFilled
+                    key={i}
+                    size={18}
+                    className="text-yellow-500"
+                  />
+                ))}
+              </div>
 
-                {/* Avatar + Name */}
-                <div className="flex items-center gap-3">
-                  <Avatar>
-                    <AvatarImage src="https://github.com/shadcn.png" />
-                    <AvatarFallback>cn</AvatarFallback>
-                  </Avatar>
+              {/* Testimonial Text */}
+              <p className="text-gray-700 text-sm leading-relaxed mb-2">
+               {`"${item.text}"`}
+              </p>
 
-                  <div>
-                    <h3 className="font-semibold text-lg">{item.name}</h3>
-                    
-                  </div>
+              {/* Customer Info */}
+              <div className="flex items-center gap-3">
+                <Avatar className="h-10 w-10 border">
+                  <AvatarImage src={item.img} alt={item.name} />
+                  <AvatarFallback className="bg-gray-100 text-gray-600">
+                    {item.name.split(' ').map(n => n[0]).join('')}
+                  </AvatarFallback>
+                </Avatar>
+                <div>
+                  <h3 className="font-semibold text-gray-900">{item.name}</h3>
                 </div>
-
-            
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <IconStarFilled
-                      key={i}
-                      size={18}
-                      className="text-yellow-500"
-                    />
-                  ))}
-                </div>
-
-
-                <p className=" text-sm ">
-                  {item.text}
-                </p>
-
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </div>
   );

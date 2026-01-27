@@ -1,3 +1,4 @@
+"use client";
 import Logo from "../../public/assets/logo.png";
 import {
   InputGroup,
@@ -8,43 +9,60 @@ import ButtonBg from "@/components/ButtonBg";
 import Link from "next/link";
 
 const Footer = () => {
-  return (
-    <div className="w-full bg-[#3A3A3A]">
-      <footer className="max-w-7xl mx-auto  md:px-8 md:py-14 px-4 py-8 ">
-        <div className=" flex flex-col lg:flex-row justify-between gap-10">
-          <div className=" max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 ">
-            <div>
-              <img src={Logo.src} alt="Freaky Chimp" className="w-32 sm:w-36" />
-            </div>
+  const scrollToSection = (id: string , route :string) => {
+    if(route){
+      window.location.href = route;
+    }
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
 
-            <div className="grid grid-cols-2  gap-10">
+  return (
+    <div className="w-full bg-[#3A3A3A] text-white">
+      <footer className="max-w-7xl mx-auto px-4 py-10">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10">
+          
+          {/* Left - Logo and Links */}
+          <div className="flex-1">
+            <img src={Logo.src} alt="Freaky Chimp" className="w-32 mb-6" />
+            
+            <div className="grid grid-cols-2 gap-12">
               <div>
-                <h4 className="text-sm font-semibold mb-4 text-white">
-                  Company
-                </h4>
-                <ul className="space-y-4 text-sm text-white">
-                  <li className="cursor-pointer ">Products</li>
-                  <li className="cursor-pointer ">Blog</li>
-                  <li className="cursor-pointer ">Twitter</li>
-                  <li className="cursor-pointer ">LinkedIn</li>
+                <h4 className="font-semibold mb-4">Company</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
+                  <li 
+                    onClick={() => scrollToSection("products", "")} 
+                    className="hover:text-white cursor-pointer"
+                  >
+                    Products
+                  </li>
+                  <li 
+                    onClick={() => scrollToSection("contactUs" , "/contact-us")} 
+                    className="hover:text-white cursor-pointer"
+                  >
+                    Contact Us
+                  </li>
+                  <li className="hover:text-white cursor-pointer">
+                    LinkedIn
+                  </li>
                 </ul>
               </div>
 
               <div>
-                <h4 className="text-sm font-semibold mb-4 text-white">Legal</h4>
-                <ul className="space-y-4 text-sm text-white">
+                <h4 className="font-semibold mb-4">Legal</h4>
+                <ul className="space-y-3 text-sm text-gray-300">
                   <li>
-                    <Link href="/about-us" className="cursor-pointer">
+                    <Link href="/about-us" className="hover:text-white">
                       About Us
                     </Link>
                   </li>
                   <li>
-                    <Link href="/contact-us" className="cursor-pointer">
-                      Privacy & Policy
+                    <Link href="/privacy-policy" className="hover:text-white">
+                      Privacy Policy
                     </Link>
                   </li>
                   <li>
-                    <Link href="/terms-and-services" className="cursor-pointer">
+                    <Link href="/terms-and-conditions" className="hover:text-white">
                       Terms and Service
                     </Link>
                   </li>
@@ -53,27 +71,31 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className=" max-w-7xl mx-auto  bg-[#8A8A8A] p-3  rounded-xl  flex flex-col gap-7">
-            <div className="text-sm text-gray-700 text-center mt-2 ">
-              <p className="font-semibold  bg-clip-text text-white">
+          {/* Right - Demo Section */}
+          <div className="flex-1 max-w-md">
+            <div className="bg-[#555555] p-6 rounded-xl">
+              <p className="text-white mb-4 font-medium">
                 <span className="text-[#FFC107]">Schedule your demo</span> and
                 get setup in hours.
               </p>
-            </div>
 
-            <InputGroup className="border-none shadow-none bg-white rounded-full h-10 px-1 ">
-              <InputGroupInput placeholder="Enter your email" />
-              <InputGroupAddon align="inline-end">
-                <ButtonBg className=" h-8">Book demo</ButtonBg>
-              </InputGroupAddon>
-            </InputGroup>
+              <InputGroup className="bg-white rounded-full h-12 overflow-hidden">
+                <InputGroupInput 
+                  placeholder="Enter your email" 
+                  className="px-4 text-gray-900"
+                />
+                <InputGroupAddon align="inline-end">
+                  <ButtonBg className="h-10 px-6 text-sm">
+                    Book demo
+                  </ButtonBg>
+                </InputGroupAddon>
+              </InputGroup>
+            </div>
           </div>
         </div>
 
-        <hr className="border-t border-gray-300 my-6 w-full mx-auto " />
-
-        <div className="max-w-4xl mx-auto text-center px-2 flex flex-col lg:flex-row justify-between text-xs text-white">
-          <p className="w-full text-center">© 2025 Freaky Chimp</p>
+        <div className="border-t border-gray-500 mt-10 pt-6 text-center text-sm text-gray-300">
+          <p>© 2026 Freaky Chimp</p>
         </div>
       </footer>
     </div>
