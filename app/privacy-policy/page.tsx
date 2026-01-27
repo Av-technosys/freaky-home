@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const PrivacyPolicy = () => {
   return (
     <>
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <section id="contactUs" className="w-full py-16 md:py-12  md:mt-24 bg-gradient-to-b from-white to-gray-50">
         <div className="max-w-5xl mx-auto">
           {/* Page Title */}
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
@@ -36,7 +36,7 @@ const PrivacyPolicy = () => {
 
           {/* Intro */}
           <p className="text-gray-700 leading-relaxed mb-10">
-            Freaky Event ("we", "our", "us") respects your privacy and is
+            Freaky Event We respects your privacy and is
             committed to protecting your personal information. This Privacy
             Policy explains how we collect, use, store, and share information
             when you use the Freaky Event mobile application and related

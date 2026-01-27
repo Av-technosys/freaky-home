@@ -10,13 +10,12 @@ export default function Header() {
       {/* LEFT CONTENT */}
       <div className="max-w-xl text-center lg:text-left mb-10 lg:mb-0">
         <h1 className="font-poppins font-bold text-3xl sm:text-4xl md:text-[45px] leading-[1.2] md:leading-[58px] text-[#191B21]">
-          Elevate Your Events <br /> With Us
+          Transform the Way You <br />  Create Events
+
         </h1>
 
-        <p className="font-poppins font-medium text-sm sm:text-base md:text-[16px] leading-[140%] text-gray-600 mt-4 md:mt-6  max-w-md mx-auto lg:mx-0">
-          Effortlessly manage every aspect of your business from a single,
-          powerful platform - overseeing bookings, payments, event schedules,
-          and vendor communications with unmatched control and simplicity.
+        <p className="font-poppins font-medium text-sm sm:text-base md:text-[16px] leading-[190%] text-gray-600 mt-4 md:mt-6  max-w-md mx-auto lg:mx-0">
+       Take control of your events with a single, easy-to-use platform designed to simplify planning, manage vendors, track schedules, and handle payments effortlessly
         </p>
 
         <ButtonBg

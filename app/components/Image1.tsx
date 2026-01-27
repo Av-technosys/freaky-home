@@ -4,37 +4,46 @@ import React from 'react'
 
 const Image1 = () => {
   return (
-    <div className="grid grid-cols-2 my-6 max-sm:grid-cols-1 max-w-7xl mx-auto py-10 max-sm:py-10 gap-4">
-      <div className="flex flex-col justify-center px-12 max-sm:px-5 gap-5 max-sm:gap-3 ">
-        <h1 className="font-bold  max-sm:text-2xl  md:text-4xl leading-tight ">
-          Explore Freaky 
-          {/* <br className='max-sm:hidden'/>  */}
-          Chimp Mobile 
-          {/* <br className='max-sm:hidden'/>  */}
-          App
-        </h1>
+    <div className="max-w-7xl mx-auto rounded-2xl  py-6 sm:py-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {/* LEFT SIDE CONTENT */}
+        <div className="order-2 lg:order-1 space-y-6">
+          <h1 className="text-4xl sm:text-2xl lg:text-4xl font-bold tracking-tight">
+           Discover the FreakyChimp Mobile App
+          </h1>
 
-        <p className=" text-gray-600">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis officia porro quam, minima culpa quae
-        </p>
+          <p className="text-lg text-gray-600 leading-relaxed">
+            Simplify every aspect of your events with our intuitive mobile app - organize bookings, track schedules, and connect with trusted vendors anytime, anywhere.
+          </p>
 
-        <Button className="rounded-3xl mt-10 bg-[linear-gradient(to_right,#FFC107,#FF5722)] px-6 py-3 text-base w-fit">
-          Explore
-        </Button>
+          <div className="flex gap-4 pt-4">
+            <Button className="rounded-full px-8 py-6 text-lg font-medium bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Get Started
+            </Button>
+            <Button 
+              variant="outline" 
+              className="rounded-full px-8 py-6 text-lg font-medium border-2 hover:bg-gray-50 transition-colors"
+            >
+              Learn More
+            </Button>
+          </div>
+        </div>
+
+        {/* RIGHT SIDE IMAGE */}
+        <div className="order-1 lg:order-2 relative flex justify-center items-center">
+          <div className="relative w-full max-w-md">
+            <div className="absolute -inset-4 bg-gradient-to-r from-orange-200 to-amber-200 rounded-3xl blur-xl opacity-50"></div>
+            <Image
+              src="/01.png"
+              alt="Freaky Chimp Mobile App"
+              width={600}
+              height={600}
+              className="relative w-full h-auto rounded-2xl shadow-2xl transform hover:scale-[1.02] transition-transform duration-300"
+              priority
+            />
+          </div>
+        </div>
       </div>
-
-      {/* RIGHT SIDE IMAGE */}
-      <div className="flex justify-center items-center relative max-sm:p-6 max-sm:mb-5">
-        <Image
-          src="/01.png"
-          alt="phones"
-          width={500}
-          height={500}
-          className="w-[65%] max-w-lg"
-        />
-
-      </div>
-      
     </div>
   )
 }
