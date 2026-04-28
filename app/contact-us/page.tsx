@@ -37,6 +37,9 @@ export default function ContactPage() {
         message: "",
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [statusMessage, setStatusMessage] = useState<string | null>(null);
+
     const [errors, setErrors] = useState<Record<string, string>>({});
 
     /* ------------------ HANDLERS ------------------ */
@@ -47,25 +50,70 @@ export default function ContactPage() {
         setErrors((prev) => ({ ...prev, [key]: "" }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         const result = contactSchema.safeParse(formData);
+        if (!result.success) {
+            const fieldErrors: Record<string, string> = {};
 
-        // if (!result.success) {
-        //     const fieldErrors: Record<string, string> = {};
+            result.error.issues.forEach((err) => {
+                const field = err.path[0] as string;
+                fieldErrors[field] = err.message;
+            });
 
-        //     result.error.errors?.forEach((err) => {
-        //         const field = err.path[0] as string;
-        //         fieldErrors[field] = err.message;
-        //     });
-
-        //     setErrors(fieldErrors);
-        //     return;
-        // }
+            setErrors(fieldErrors);
+            setStatusMessage(null);
+            return;
+        }
 
         setErrors({});
-        console.log("Valid Data:", result.data);
+        setStatusMessage(null);
+        setIsSubmitting(true);
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const apiResult = await response.json();
+
+            if (!response.ok) {
+                if (apiResult?.errors) {
+                    const fieldErrors: Record<string, string> = {};
+                    apiResult.errors.forEach((errorItem: any) => {
+                        const field = errorItem.path?.[0];
+                        if (field) {
+                            fieldErrors[field] = errorItem.message;
+                        }
+                    });
+                    setErrors(fieldErrors);
+                    return;
+                }
+
+                setStatusMessage(apiResult?.error || "Unable to submit the form.");
+                return;
+            }
+
+            setStatusMessage("Thanks! Your message has been sent successfully.");
+            setFormData({
+                firstName: "",
+                lastName: "",
+                email: "",
+                company: "",
+                phone: "",
+                useCase: "",
+                message: "",
+            });
+        } catch (error) {
+            setStatusMessage("Something went wrong. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     /* ------------------ UI ------------------ */
@@ -234,9 +282,16 @@ export default function ContactPage() {
                     <Button
                         type="submit"
                         className="w-full bg-yellow-400 hover:bg-yellow-300 text-black font-semibold py-5 rounded-md"
+                        disabled={isSubmitting}
                     >
                         Submit
                     </Button>
+
+                    {statusMessage && (
+                        <p className="text-center text-sm text-gray-700">
+                            {statusMessage}
+                        </p>
+                    )}
 
                     {/* Footer */}
                     <p className="text-xs text-gray-500 text-center">
