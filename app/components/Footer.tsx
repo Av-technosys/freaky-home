@@ -1,80 +1,155 @@
-import React from "react";
-import Logo from "../../public/assets/logo.png";
-import { InputGroup, InputGroupAddon, InputGroupInput } from "@/components/ui/input-group";
-import ButtonBg from "@/components/ButtonBg";
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Clock,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
-const Footer = () => {
+const quickLinks = ["About Us", "Contact Us", "Policies"];
+const categories = [
+  "Party",
+  "Baby Shower",
+  "Birthday",
+  "Engagement",
+  "Wedding",
+  "Decor",
+  "Concert",
+];
+
+const socialLinks = [
+  { icon: Facebook, label: "Facebook" },
+  { icon: Twitter, label: "Twitter" },
+  { icon: Instagram, label: "Instagram" },
+  { icon: Mail, label: "Email" },
+];
+
+const contactItems = [
+  {
+    icon: MapPin,
+    text: "456 Fashion Avenue, Style District, New York, NY 10013",
+  },
+  { icon: Phone, text: "+1 (555) 987-6543" },
+  { icon: Mail, text: "hello@freakychip.com" },
+  { icon: Clock, text: "Mon – Sun: 10:00 AM – 8:00 PM" },
+];
+
+export default function Footer() {
   return (
-    <div className="w-full bg-[#3A3A3A]">
-      <footer className="max-w-7xl mx-auto  md:px-8 md:py-14 px-4 py-8 ">
-        <div className=" flex flex-col lg:flex-row justify-between gap-10">
-          <div className=" max-w-7xl mx-auto flex flex-col sm:flex-row gap-10 ">
-            <div>
-              <img
-                src={Logo.src}
-                alt="Freaky Chimp"
-                className="w-32 sm:w-36"
-              />
-            </div>
-
-            <div className="grid grid-cols-2  gap-10">
-              <div>
-                <h4 className="text-sm font-semibold mb-4 text-white">
-                  Company
-                </h4>
-                <ul className="space-y-4 text-sm text-white">
-                  <li className="cursor-pointer ">Products</li>
-                  <li className="cursor-pointer ">Blog</li>
-                  <li className="cursor-pointer ">Twitter</li>
-                  <li className="cursor-pointer ">LinkedIn</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-sm font-semibold mb-4 text-white">
-                  Legal
-                </h4>
-                <ul className="space-y-4 text-sm text-white">
-                  <li className="cursor-pointer">Status</li>
-                  <li className="cursor-pointer">Privacy</li>
-                  <li className="cursor-pointer">Terms of Service</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className=" max-w-7xl mx-auto  bg-[#8A8A8A] p-3  rounded-xl  flex flex-col gap-7">
-            <p className="text-sm text-gray-700 text-center mt-2 ">
-              <p className="font-semibold  bg-clip-text text-white">
-                <span className="text-[#FFC107]">Schedule your demo</span> and get setup in hours.
-              </p>
-            </p>
-
-
-            <InputGroup className="border-none shadow-none bg-white rounded-full h-10 px-1 ">
-              <InputGroupInput placeholder="Enter your email" />
-              <InputGroupAddon align="inline-end">
-                <ButtonBg className=" h-8">
-                  Book demo
-                </ButtonBg>
-              </InputGroupAddon>
-            </InputGroup>
-          </div>
-        </div>
-
-        <hr className="border-t border-gray-300 my-6 w-full mx-auto " />
-
-        <div className="max-w-4xl mx-auto text-center px-2 flex flex-col lg:flex-row justify-between text-xs text-white">
-          <p>© 2025 Freaky Chimp</p>
-          <p>
-            Registered at Camburgh House, 27 New Dov er Road, Canterbury, CT1 3DN,
-            England · Company no. 13585168
+    <footer className="bg-[#0a0a0a] text-white font-sans">
+      {/* Main grid */}
+      <div className="max-w-7xl mx-auto px-6 md:px-10 pt-14 pb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+        {/* Brand */}
+        <div>
+          <Link href={"/"} className="flex items-center gap-3 mb-4">
+            <Image src={"/logo.svg"} alt="Freaky Chimp Logo" width={40} height={40} className=" h-12 w-auto object-contain" />
+          </Link>
+          <p className="text-gray-400 text-sm leading-relaxed max-w-xs mb-6">
+            Your destination for premium fashion and lifestyle. Curated
+            collections for the modern individual.
           </p>
+          <div className="flex gap-3">
+            {socialLinks.map(({ icon: Icon, label }) => (
+              <button
+                key={label}
+                aria-label={label}
+                className="w-10 h-10 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] flex items-center justify-center text-gray-400 hover:bg-orange-500 hover:border-orange-500 hover:text-white transition-all duration-200 hover:-translate-y-0.5"
+              >
+                <Icon size={16} />
+              </button>
+            ))}
+          </div>
         </div>
 
-      </footer>
-    </div>
-  );
-};
+        {/* Quick Links */}
+        <div>
+          <p className="uppercase tracking-widest text-lg font-extrabold mb-5">
+            Quick Links
+          </p>
+          <ul className="space-y-3">
+            {quickLinks.map((link) => (
+              <li key={link}>
+                <a
+                  href="#"
+                  className="text-gray-400 text-sm hover:text-orange-500 transition-colors duration-200 inline-block hover:translate-x-1"
+                >
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-export default Footer;
+        {/* Categories */}
+        <div>
+          <p className="uppercase tracking-widest text-lg font-extrabold mb-5">
+            Categories
+          </p>
+          <ul className="space-y-3">
+            {categories.map((cat) => (
+              <li key={cat}>
+                <a
+                  href="#"
+                  className="text-gray-400 text-sm hover:text-orange-500 transition-colors duration-200 inline-block hover:translate-x-1"
+                >
+                  {cat}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact */}
+        <div>
+          <p className="uppercase tracking-widest text-lg font-extrabold mb-5">
+            Contact
+          </p>
+          <ul className="space-y-4">
+            {contactItems.map(({ icon: Icon, text }) => (
+              <li key={text} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
+                <Icon
+                  size={16}
+                  className="text-orange-500 mt-0.5 shrink-0"
+                />
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom bar */}
+      <div className="border-t border-[#1a1a1a]">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 flex-wrap">
+          <span className="text-gray-500 text-xs">
+            © 2024 Freaky chimp. All rights reserved.
+          </span>
+          <div className="flex items-center gap-4 flex-wrap">
+            {["Privacy Policy", "Terms & Conditions"].map(
+              (item, i, arr) => (
+                <span key={item} className="flex items-center gap-4">
+                  <a
+                    href="#"
+                    className="text-gray-500 text-xs hover:text-orange-500 transition-colors"
+                  >
+                    {item}
+                  </a>
+                  {i < arr.length - 1 && (
+                    <span className="text-gray-700">|</span>
+                  )}
+                </span>
+              )
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Accent bar */}
+      <div className="h-1 bg-linear-to-r from-orange-500 via-red-500 to-yellow-400" />
+    </footer>
+  );
+}

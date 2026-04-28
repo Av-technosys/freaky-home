@@ -13,7 +13,7 @@ export default function Header() {
           Elevate Your Events <br /> With Us
         </h1>
 
-        <p className="font-poppins font-medium text-sm sm:text-base md:text-[16px] leading-[140%] text-gray-600 mt-4 md:mt-6  max-w-md mx-auto lg:mx-0">
+        <p className=" text-sm sm:text-base md:text-[16px] text-gray-600 mt-4 md:mt-6  max-w-md mx-auto lg:mx-0">
           Effortlessly manage every aspect of your business from a single,
           powerful platform - overseeing bookings, payments, event schedules,
           and vendor communications with unmatched control and simplicity.

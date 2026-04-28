@@ -45,17 +45,17 @@ const testimonials = [
 const TestimonialCards = () => {
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full max-w-7xl px-4 mt-25">
+      <div className="w-full mt-25">
 
         <h1 className="text-4xl text-center max-sm:text-2xl font-bold font-serif">
           What our customer <br /> says About Us
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div className="grid  grid-cols-1 md:grid-cols-3 gap-6 mt-10">
           {testimonials.map((item, index) => (
             <Card
               key={index}
-              className="rounded-2xl shadow-md hover:shadow-lg duration-200 border bg-white p-6"
+              className="rounded hover:shadow-lg duration-200 border bg-white p-6"
             >
               <CardContent className="p-0 flex flex-col gap-4">
 
@@ -68,23 +68,23 @@ const TestimonialCards = () => {
 
                   <div>
                     <h3 className="font-semibold text-lg">{item.name}</h3>
-                    
+                    <div className="flex gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <IconStarFilled
+                          key={i}
+                          size={14}
+                          className="text-yellow-500"
+                        />
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-            
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <IconStarFilled
-                      key={i}
-                      size={18}
-                      className="text-yellow-500"
-                    />
-                  ))}
-                </div>
 
 
-                <p className=" text-sm ">
+
+
+                <p className=" text-gray-600 text-sm ">
                   {item.text}
                 </p>
 
