@@ -1,150 +1,224 @@
-import React from "react";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: {
+    absolute: "Freaky Chimp Privacy Policy Ensuring Trust",
+  },
+  description:
+    "Read Freaky Chimp’ Privacy Policy to understand how we collect, use, and protect your data.",
+  alternates: {
+    canonical: "https://www.freakychimp.com/privacy-policy/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
+  openGraph: {
+    title: "Freaky Chimp Privacy Policy Ensuring Trust",
+    description:
+      "Read Freaky Chimp’ Privacy Policy to understand how we collect, use, and protect your data.",
+    url: "https://www.freakychimp.com/privacy-policy/",
+    siteName: "Freaky Chimp",
+    type: "website",
+  },
+};
 const PrivacyPolicy = () => {
-    return (
-        <div className="  pt-24 min-h-screen py-12 px-6 md:px-16">
-            <div className="max-w-4xl mx-auto   p-8">
+  return (
+    <>
+      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          {/* Page Title */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
+            Privacy Policy
+          </h1>
 
-                <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                    Privacy Policy
-                </h1>
+          {/* Intro */}
+          <p className="text-gray-700 leading-relaxed mb-10">
+            Freaky Event ("we", "our", "us") respects your privacy and is
+            committed to protecting your personal information. This Privacy
+            Policy explains how we collect, use, store, and share information
+            when you use the Freaky Event mobile application and related
+            services.
+          </p>
 
-                <p className="text-gray-600 mb-4">
-                    Last Updated: April 2026
-                </p>
+          {/* Section 1 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            1. Information We Collect
+          </h2>
 
-                <p className="text-gray-700 mb-6">
-                    Welcome to <span className="font-semibold">Freaky Chimp</span>. This platform acts as a
-                    marketplace connecting customers with event service providers such as vendors,
-                    organizers, and businesses. This Privacy Policy explains how we collect, use,
-                    and protect your information when you use our services.
-                </p>
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            a. Personal Information
+          </h3>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-6">
+            <li>Name, email address, phone number</li>
+            <li>Profile details</li>
+            <li>Payment and transaction details (processed securely)</li>
+            <li>Event participation details</li>
+          </ul>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        1. Information We Collect
-                    </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                        <li>Personal details (name, email, phone number)</li>
-                        <li>Event and booking details (event type, date, attendees)</li>
-                        <li>Vendor interactions and service preferences</li>
-                        <li>Payment details (processed securely via third-party providers)</li>
-                        <li>Device and usage data (IP address, browser, activity logs)</li>
-                    </ul>
-                </section>
+          <h3 className="text-lg font-semibold text-gray-800 mb-2">
+            b. Automatically Collected Information
+          </h3>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
+            <li>Device information (model, OS version)</li>
+            <li>App usage data</li>
+            <li>IP address and log data</li>
+          </ul>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        2. How We Use Your Information
-                    </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                        <li>To connect customers with vendors and enable bookings</li>
-                        <li>To manage event services and transactions</li>
-                        <li>To send booking confirmations, reminders, and notifications</li>
-                        <li>To improve platform functionality and user experience</li>
-                        <li>To ensure security and prevent fraud</li>
-                    </ul>
-                </section>
+          {/* Section 2 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            2. How We Use Your Information
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
+            <li>Create and manage your account</li>
+            <li>Enable event discovery, booking, and participation</li>
+            <li>Process payments securely</li>
+            <li>Communicate updates, notifications, and support messages</li>
+            <li>Improve app performance and user experience</li>
+            <li>Comply with legal and regulatory requirements</li>
+          </ul>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        3. Sharing Your Information
-                    </h2>
-                    <p className="text-gray-700">
-                        We do not sell your personal data. Your information may be shared with:
-                    </p>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2 mt-2">
-                        <li>Vendors for booking fulfillment and service delivery</li>
-                        <li>Payment gateways for secure transactions</li>
-                        <li>Service providers supporting platform operations</li>
-                        <li>Authorities when legally required</li>
-                    </ul>
-                </section>
+          {/* Section 3 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            3. Sharing of Information
+          </h2>
+          <p className="text-gray-700 mb-4">
+            We may share your information with:
+          </p>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+            <li>
+              <strong>Service Providers:</strong> Payment gateways, analytics,
+              and notification services
+            </li>
+            <li>
+              <strong>Affiliates:</strong> Companies under common ownership or
+              control
+            </li>
+            <li>
+              <strong>Legal Authorities:</strong> When required by law
+            </li>
+          </ul>
+          <p className="text-gray-700 mb-10">
+            We do not sell your personal data.
+          </p>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        4. Data Security
-                    </h2>
-                    <p className="text-gray-700">
-                        We use industry-standard security practices to protect user data including
-                        authentication, encrypted transactions, and secure storage. However, no system
-                        is completely secure.
-                    </p>
-                </section>
+          {/* Section 4 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            4. Payments & Security
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-10">
+            All payment-related information is handled through secure and
+            trusted third-party payment processors. Freaky Event does not store
+            full card details on its servers.
+          </p>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        5. User Accounts & Authentication
-                    </h2>
-                    <p className="text-gray-700">
-                        Users can register via email, phone number (OTP), or social login. Account
-                        information is securely stored and can be updated from profile settings.
-                    </p>
-                </section>
+          {/* Section 5 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            5. Cookies & Tracking Technologies
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+            <li>Remember user preferences</li>
+            <li>Improve app functionality</li>
+            <li>Analyze usage patterns</li>
+          </ul>
+          <p className="text-gray-700 mb-10">
+            You can control cookie settings through your device or browser
+            settings. Disabling cookies may affect certain app features.
+          </p>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        6. Payments & Transactions
-                    </h2>
-                    <p className="text-gray-700">
-                        Payments are processed via secure third-party providers. We do not store
-                        sensitive payment information. Booking confirmations, receipts, and transaction
-                        history are available within the platform.
-                    </p>
-                </section>
+          {/* Section 6 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            6. Third-Party Links & Services
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-10">
+            The app may contain links to third-party websites or services.
+            Freaky Event is not responsible for the privacy practices or content
+            of third parties. We recommend reviewing their privacy policies
+            separately.
+          </p>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        7. Notifications & Communication
-                    </h2>
-                    <p className="text-gray-700">
-                        We send notifications such as booking confirmations, reminders, payment updates,
-                        and review requests via push notifications and email.
-                    </p>
-                </section>
+          {/* Section 7 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            7. Children’s Privacy
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-10">
+            Freaky Event is not intended for children under the age of 13. We do
+            not knowingly collect personal information from children. If such
+            data is identified, it will be deleted promptly.
+          </p>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        8. Your Rights
-                    </h2>
-                    <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                        <li>Access and update your personal data</li>
-                        <li>Request deletion of your account</li>
-                        <li>Withdraw consent at any time</li>
-                    </ul>
-                </section>
+          {/* Section 8 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            8. Your Rights & Choices
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
+            <li>Access, update, or delete your personal data</li>
+            <li>Withdraw consent for data processing</li>
+            <li>Request data portability</li>
+          </ul>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        9. Cookies & Tracking
-                    </h2>
-                    <p className="text-gray-700">
-                        Cookies are used to enhance experience, analyze usage, and improve services.
-                    </p>
-                </section>
+          {/* Section 9 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            9. GDPR Compliance (For EEA Users)
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-10">
+            If you are located in the European Economic Area (EEA), your data is
+            processed in accordance with the General Data Protection Regulation
+            (GDPR). We ensure lawful, fair, and transparent handling of personal
+            data.
+          </p>
 
-                <section className="mb-8">
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        10. Changes to Policy
-                    </h2>
-                    <p className="text-gray-700">
-                        We may update this policy periodically. Changes will be reflected with an updated date.
-                    </p>
-                </section>
+          {/* Section 10 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            10. California Privacy Rights (CCPA & CalOPPA)
+          </h2>
+          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-10">
+            <li>Know what personal data is collected</li>
+            <li>Request access or deletion of personal data</li>
+            <li>Opt out of data sale (we do not sell personal data)</li>
+          </ul>
 
-                <section>
-                    <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                        11. Contact Us
-                    </h2>
-                    <div className="mt-3 text-gray-700">
-                        <p>Email: xyz@gmail.com</p>
-                        <p>Phone: +91 XXXXXXX369</p>
-                    </div>
-                </section>
+          {/* Section 11 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            11. Business Transfers
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-10">
+            In the event of a merger, acquisition, or sale of assets, user data
+            may be transferred to the new entity, subject to the same privacy
+            commitments.
+          </p>
 
-            </div>
+          {/* Section 12 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            12. Changes to This Privacy Policy
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-10">
+            We may update this Privacy Policy from time to time. Any changes
+            will be notified through the app or other appropriate channels.
+            Continued use of the app indicates acceptance of the updated policy.
+          </p>
+
+          {/* Section 13 */}
+          <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+            13. Contact Us
+          </h2>
+          <p className="text-gray-700 leading-relaxed mb-12">
+            If you have any questions or concerns about this Privacy Policy, you
+            may contact us through the support section available within the
+            Freaky Event mobile application.
+          </p>
+
+          {/* Footer */}
+          <p className="text-sm text-gray-500">
+            By using the Freaky Event mobile app, you agree to this Privacy
+            Policy.
+          </p>
         </div>
-    );
+      </section>
+    </>
+  );
 };
 
 export default PrivacyPolicy;

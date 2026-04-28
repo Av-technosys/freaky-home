@@ -1,5 +1,4 @@
-import { Mail, Phone } from "lucide-react";
-import React from "react";
+import { Mail } from "lucide-react";
 
 export const ContactUs = () => {
   return (
@@ -9,19 +8,12 @@ export const ContactUs = () => {
       </h1>
 
       <div className="  flex justify-center items-center gap-5 max-sm:gap-10  ">
-        <span className="text-center space-y-2  items-center ">
-          <button className="rounded-full p-3 max-sm:p-2  text-white bg-[linear-gradient(to_right,#FFC107,#FF5722)] ">
-            <Phone />
-          </button>
-          <p className="font-bold max-sm:text-xs ">+91 XXXXXXX369</p>
-        </span>
-
         <span className="text-center space-y-2 ">
           {" "}
           <button className="rounded-full p-3 max-sm:p-2 text-white bg-[linear-gradient(to_right,#FFC107,#FF5722)]">
             <Mail />
           </button>
-          <p className="font-bold max-sm:text-xs ">xyz@gmail.com</p>
+          <p className="font-bold max-sm:text-xs ">hello@freakychimp.com</p>
         </span>
       </div>
     </div>
