@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 const PrivacyPolicy = () => {
   return (
     <>
-      <section className="bg-white py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+      <div className="  pt-24 min-h-screen py-12 px-6 md:px-16">
+        <div className="max-w-4xl  mx-auto p-8">
           {/* Page Title */}
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8">
             Privacy Policy
@@ -216,7 +216,7 @@ const PrivacyPolicy = () => {
             Policy.
           </p>
         </div>
-      </section>
+      </div>
     </>
   );
 };

@@ -2,8 +2,6 @@
 
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Logo from "../../public/assets/logo.png";
-import Logo from "../../public/assets/logo.png";
 import { useState } from "react";
 import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 import Link from "next/link";

@@ -188,7 +188,7 @@ export default function ContactPage() {
                                 handleChange("useCase", value)
                             }
                         >
-                            <SelectTrigger>
+                            <SelectTrigger className=" w-full">
                                 <SelectValue placeholder="Select..." />
                             </SelectTrigger>
                             <SelectContent>

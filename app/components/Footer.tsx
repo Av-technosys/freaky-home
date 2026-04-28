@@ -10,7 +10,25 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 
-const quickLinks = ["About Us", "Contact Us", "Policies"];
+// const quickLinks = ["About Us", "Contact Us", "Policies"];
+const quickLinks = [
+  {
+    name: "About Us",
+    href: "/about-us",
+  },
+  {
+    name: "Contact Us",
+    href: "/contact-us",
+  },
+  {
+    name: "Privacy Policy",
+    href: "/privacy-policy",
+  },
+  {
+    name: "Terms & Conditions",
+    href: "/terms-and-condition",
+  },
+]
 const categories = [
   "Party",
   "Baby Shower",
@@ -32,10 +50,11 @@ const contactItems = [
   {
     icon: MapPin,
     text: "456 Fashion Avenue, Style District, New York, NY 10013",
+    href: "https://maps.google.com/?q=456 Fashion Avenue, Style District, New York, NY 10013",
   },
-  { icon: Phone, text: "+1 (555) 987-6543" },
-  { icon: Mail, text: "hello@freakychip.com" },
-  { icon: Clock, text: "Mon – Sun: 10:00 AM – 8:00 PM" },
+  { icon: Phone, text: "+1 (555) 987-6543", href: "tel:+15559876543" },
+  { icon: Mail, text: "hello@freakychip.com", href: "mailto:hello@freakychip.com" },
+  { icon: Clock, text: "Mon – Sun: 10:00 AM – 8:00 PM", href: "#" },
 ];
 
 export default function Footer() {
@@ -72,13 +91,13 @@ export default function Footer() {
           </p>
           <ul className="space-y-3">
             {quickLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href="#"
+              <li key={link.href}>
+                <Link
+                  href={link.href}
                   className="text-gray-400 text-sm hover:text-orange-500 transition-colors duration-200 inline-block hover:translate-x-1"
                 >
-                  {link}
-                </a>
+                  {link.name}
+                </Link>
               </li>
             ))}
           </ul>
@@ -109,13 +128,13 @@ export default function Footer() {
             Contact
           </p>
           <ul className="space-y-4">
-            {contactItems.map(({ icon: Icon, text }) => (
+            {contactItems.map(({ icon: Icon, text, href }) => (
               <li key={text} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
                 <Icon
                   size={16}
                   className="text-orange-500 mt-0.5 shrink-0"
                 />
-                <span>{text}</span>
+                <Link href={href} className="hover:text-orange-500 transition-colors">{text}</Link>
               </li>
             ))}
           </ul>
@@ -128,7 +147,7 @@ export default function Footer() {
           <span className="text-gray-500 text-xs">
             © 2024 Freaky chimp. All rights reserved.
           </span>
-          <div className="flex items-center gap-4 flex-wrap">
+          {/* <div className="flex items-center gap-4 flex-wrap">
             {["Privacy Policy", "Terms & Conditions"].map(
               (item, i, arr) => (
                 <span key={item} className="flex items-center gap-4">
@@ -144,7 +163,7 @@ export default function Footer() {
                 </span>
               )
             )}
-          </div>
+          </div> */}
         </div>
       </div>
 

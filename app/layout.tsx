@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Roboto } from "next/font/google";
 import "./globals.css";
-import { Metadata } from "next";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: {
@@ -43,11 +44,6 @@ const playflair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
 })
-
-export const metadata: Metadata = {
-  title: "Freaky Chimp",
-  description: "Freaky Chimp",
-};
 
 export default function RootLayout({
   children,

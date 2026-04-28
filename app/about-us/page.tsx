@@ -1,33 +1,5 @@
-
 import ButtonBg from "@/components/ButtonBg";
-import { Metadata } from "next";
 import React from "react";
-
-
-export const metadata: Metadata = {
-  title: {
-    absolute: "About Freaky Chimp | Smart Event Management Platform",
-  },
-  description:
-    "Freaky Chimp is a modern event management platform that helps users plan, book, and manage events online. Discover trusted vendors, seamless bookings, and secure payments—all in one place.",
-  alternates: {
-    canonical: "https://www.freakychimp.com/about-us",
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  openGraph: {
-    title: "About Freaky Chimp | Effortless Event Planning & Booking",
-    description:
-      "Learn how Freaky Chimp simplifies event planning with online booking, verified vendors, real-time updates, and secure payments.",
-    url: "https://www.freakychimp.com/about-us",
-    siteName: "Freaky Chimp",
-    type: "website",
-  },
-};
-
-
 
 const AboutUs = () => {
   return (
