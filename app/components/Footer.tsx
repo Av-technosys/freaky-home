@@ -49,12 +49,24 @@ const socialLinks = [
 const contactItems = [
   {
     icon: MapPin,
-    text: "456 Fashion Avenue, Style District, New York, NY 10013",
-    href: "https://maps.google.com/?q=456 Fashion Avenue, Style District, New York, NY 10013",
+    text: "Jaipur, Rajasthan, India",
+    href: "https://maps.google.com/?q=Jaipur,Rajasthan,India",
   },
-  { icon: Phone, text: "+1 (555) 987-6543", href: "tel:+15559876543" },
-  { icon: Mail, text: "hello@freakychip.com", href: "mailto:hello@freakychip.com" },
-  { icon: Clock, text: "Mon – Sun: 10:00 AM – 8:00 PM", href: "#" },
+  // {
+  //   icon: Phone,
+  //   text: "+91 XXXXX XXXXX",
+  //   href: "tel:+91XXXXXXXXXX",
+  // },
+  {
+    icon: Mail,
+    text: "hello@freakychimp.com",
+    href: "mailto:hello@freakychimp.com",
+  },
+  {
+    icon: Clock,
+    text: "Mon – Sun: 10:00 AM – 8:00 PM",
+    href: "#",
+  },
 ];
 
 export default function Footer() {

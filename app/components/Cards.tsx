@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { IconStarFilled } from "@tabler/icons-react";
@@ -6,39 +5,33 @@ import { IconStarFilled } from "@tabler/icons-react";
 const testimonials = [
   {
     img: "01.png",
-    name: "Jane Doe",
-
-    text: "This product has completely transformed our workflow. The team is more productive, and the results are outstanding. Highly recommended!",
+    name: "Rishabh Rana",
+    text: "Freaky Chimp transformed our daughter’s wedding planning. Every vendor was professional, punctual, and brilliant.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
-    name: "John Smith",
-
-    text: "Incredible service and a fantastic product. It's rare to find a company that delivers on its promises so consistently. A five-star experience all around.",
+    img: "02.png",
+    name: "Rajdeep Singh",
+    text: "Planning corporate events has never been smoother. Booking, payments, and communication — all in one place.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
-    name: "Emily White",
-
-    text: "A solid tool that does exactly what it promises. There was a bit of a learning curve, but their support team was incredibly helpful.",
+    img: "03.png",
+    name: "Urvashi Rai",
+    text: "There was a small learning curve initially, but the support team was incredibly responsive and helpful.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "04.png",
     name: "Aarav Mehta",
-
-    text: "The platform has streamlined our operations beautifully. Our team works faster, smarter, and more efficiently than ever before.",
+    text: "The vendor quality is exceptional. Décor, catering, and photography exceeded all our expectations.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
-    name: "Riya Kapoor",
-
-    text: "Exceptional service and a game-changing product. The reliability and consistency we get from this tool is unmatched.",
+    img: "05.png",
+    name: "Riya Mathur",
+    text: "Reliable, consistent, and genuinely impressive. Every event booking experience keeps getting better.",
   },
   {
-    img: "/mnt/data/25095194-83cc-4647-93b0-b31e75e223be.png",
+    img: "06.png",
     name: "Kabir Sharma",
-
-    text: "Super intuitive and well-designed. Took me a bit to explore all features, but once I did, the workflow became incredibly smooth.",
+    text: "Super intuitive platform with real-time updates. My entire team relies on it for event planning now.",
   },
 ];
 
@@ -61,10 +54,10 @@ const TestimonialCards = () => {
 
                 {/* Avatar + Name */}
                 <div className="flex items-center gap-3">
-                  <Avatar>
+                  {/* <Avatar>
                     <AvatarImage src="https://github.com/shadcn.png" />
                     <AvatarFallback>cn</AvatarFallback>
-                  </Avatar>
+                  </Avatar> */}
 
                   <div>
                     <h3 className="font-semibold text-lg">{item.name}</h3>
@@ -79,11 +72,6 @@ const TestimonialCards = () => {
                     </div>
                   </div>
                 </div>
-
-
-
-
-
                 <p className=" text-gray-600 text-sm ">
                   {item.text}
                 </p>

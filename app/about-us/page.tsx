@@ -8,93 +8,38 @@ const AboutUs = () => {
 
         {/* HERO */}
         <section className="text-center px-6 md:px-20 py-20">
+          <p className="text-sm text-gray-400 uppercase mb-3">Our Story</p>
+
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-            Built for modern <br /> event management systems
+            Built for the People <br /> Who Make Events Magical
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Freaky Chimp provides a unified platform to manage bookings,
-            payments, vendors, and operations — helping businesses run smarter
-            and more efficiently.
-          </p>
 
-          {/* Image Row */}
-          <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <img
-              src="https://images.unsplash.com/photo-1519167758481-83f29c1b8a5b"
-              alt=""
-              className="  rounded-sm h-60 w-full object-cover"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978"
-              alt=""
-              className="rounded-sm  h-60 w-full object-cover"
-            />
-            <img
-              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
-              alt=""
-              className="rounded-sm h-60 w-full object-cover"
-            />
-          </div>
-
-          <p className="mt-10 max-w-3xl mx-auto text-gray-600">
-            We are on a mission to help event businesses reach their full
-            potential through smarter and more efficient workflows across all
-            operations.
+          <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+            Freaky Chimp was created with one simple belief — planning a
+            great event should be as joyful as attending one. We built a
+            unified platform that connects passionate vendors with people
+            who want to celebrate life’s most important moments.
           </p>
         </section>
 
-        {/* STATS */}
-        <section className="px-6 md:px-20 pb-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-              <h2 className="text-3xl font-bold">25+</h2>
-              <p className="text-gray-500 text-sm mt-2">
-                Industry Recognitions
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold">100+</h2>
-              <p className="text-gray-500 text-sm mt-2">
-                Trusted Vendors
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold">500+</h2>
-              <p className="text-gray-500 text-sm mt-2">
-                Events Managed
-              </p>
-            </div>
-            <div>
-              <h2 className="text-3xl font-bold">3,000+</h2>
-              <p className="text-gray-500 text-sm mt-2">
-                Happy Customers
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* SECTION 1 */}
+        {/* MISSION */}
         <section className="px-6 md:px-20 py-20 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-sm text-gray-400 mb-2 uppercase">Solution</p>
-            <h2 className="text-3xl font-semibold mb-4">
-              Delivering Certainty
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Freaky Chimp helps businesses overcome event management
-              challenges with powerful automation and real-time tracking.
+            <p className="text-sm text-gray-400 uppercase mb-2">
+              Our Mission
             </p>
 
-            <div className="space-y-4 text-gray-600">
-              <p>
-                <span className="font-semibold">Faster Decisions</span> — Get
-                insights instantly and adapt quickly.
-              </p>
-              <p>
-                <span className="font-semibold">Sustainable Growth</span> —
-                Scale operations while maintaining efficiency.
-              </p>
-            </div>
+            <h2 className="text-3xl font-semibold mb-5">
+              Helping Event Businesses Reach Their True Potential
+            </h2>
+
+            <p className="text-gray-600 leading-7">
+              We’re on a mission to modernise the way events are planned,
+              managed, and experienced. By combining smart technology with
+              a curated network of trusted vendors, Freaky Chimp empowers
+              event professionals to grow their business and helps
+              customers celebrate with confidence.
+            </p>
           </div>
 
           <img
@@ -104,29 +49,54 @@ const AboutUs = () => {
           />
         </section>
 
-        {/* SECTION 2 */}
-        <section className="px-6 md:px-20 py-20 grid md:grid-cols-2 gap-12 items-center">
-          <img
-            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
-            alt=""
-            className="rounded-sm w-full h-80 object-cover"
-          />
-
-          <div>
-            <p className="text-sm text-gray-400 mb-2 uppercase">Solution</p>
-            <h2 className="text-3xl font-semibold mb-4">
-              Unparalleled Experience
-            </h2>
-            <p className="text-gray-600 mb-6">
-              We bring modern tools and seamless workflows to event
-              businesses, helping teams collaborate better and deliver
-              exceptional results.
+        {/* VALUES */}
+        <section className="px-6 md:px-20 py-20">
+          <div className="max-w-3xl mb-14">
+            <p className="text-sm text-gray-400 uppercase mb-2">
+              Our Values
             </p>
 
-            <div className="space-y-4 text-gray-600">
-              <p>• Built for scalability and performance</p>
-              <p>• Consistent and reliable workflows</p>
-              <p>• Designed for modern teams</p>
+            <h2 className="text-3xl font-semibold">
+              The Principles That Drive Everything We Do
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="border border-neutral-200 p-8 rounded-sm">
+              <h3 className="text-xl font-semibold mb-3">Trust</h3>
+
+              <p className="text-gray-600 leading-7">
+                Every vendor on our platform is verified. We hold our
+                partners to high standards so customers can book with
+                complete peace of mind.
+              </p>
+            </div>
+
+            <div className="border border-neutral-200 p-8 rounded-sm">
+              <h3 className="text-xl font-semibold mb-3">Simplicity</h3>
+
+              <p className="text-gray-600 leading-7">
+                Event planning is already complex. Our platform removes
+                friction from discovery to booking to payment.
+              </p>
+            </div>
+
+            <div className="border border-neutral-200 p-8 rounded-sm">
+              <h3 className="text-xl font-semibold mb-3">Growth</h3>
+
+              <p className="text-gray-600 leading-7">
+                Freaky Chimp helps event professionals reach more clients,
+                grow their business, and scale sustainably.
+              </p>
+            </div>
+
+            <div className="border border-neutral-200 p-8 rounded-sm">
+              <h3 className="text-xl font-semibold mb-3">Celebration</h3>
+
+              <p className="text-gray-600 leading-7">
+                Every feature and partnership is built around making your
+                event truly unforgettable.
+              </p>
             </div>
           </div>
         </section>
@@ -134,16 +104,16 @@ const AboutUs = () => {
         {/* CTA */}
         <section className="text-center px-6 md:px-20 py-24">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Freaky Chimp Today
+            Ready to Be Part of Something Special?
           </h2>
-          <p className="text-gray-600 mb-8">
-            Start managing your events smarter, faster, and better.
+
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
+            Whether you’re planning an event or offering your services,
+            Freaky Chimp is your home. Join a growing community of vendors
+            and customers redefining how events are celebrated.
           </p>
 
-          {/* <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition">
-                        Get Started
-                    </button> */}
-          <ButtonBg className=" rounded-sm h-12 max-w-none w-40">
+          <ButtonBg className="rounded-sm h-12 max-w-none w-48">
             Become a Vendor
           </ButtonBg>
         </section>

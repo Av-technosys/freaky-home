@@ -9,19 +9,19 @@ const
   FAQ = () => {
     const items = [
       {
-        title: "What services do you offer?",
+        title: "What services are available on Freaky Chimp?",
         content:
-          "We offer a variety of services including web development, mobile app development, and IT consulting.",
+          "Freaky Chimp offers catering, decoration, photography, videography, entertainment, venue booking, and complete event planning services for every occasion.",
       },
       {
-        title: "Why to choose Freaky Chimp?",
+        title: "Why should I choose Freaky Chimp?",
         content:
-          "We provide high-quality service, expert team members, and fast delivery.",
+          "We make event planning simple with verified vendors, seamless booking, and a real-time dashboard trusted by 3,000+ customers.",
       },
       {
         title: "How can I contact support?",
         content:
-          "You can easily reach us through email or by filling out the contact form on our website.",
+          "You can contact our support team via email, phone, or the Contact Us page. Support is available daily from 10:00 AM to 8:00 PM.",
       },
     ];
 
@@ -33,7 +33,7 @@ const
           </h1>
 
           <p className="mt-4 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam a reiciendis ratione! Lorem ipsum dolor sit.
+            Plan unforgettable events effortlessly with trusted vendors, seamless bookings, and dedicated support.
           </p>
         </div>
 

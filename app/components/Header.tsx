@@ -10,13 +10,12 @@ export default function Header() {
       {/* LEFT CONTENT */}
       <div className="max-w-xl text-center lg:text-left mb-10 lg:mb-0">
         <h1 className="font-poppins font-bold text-3xl sm:text-4xl md:text-[45px] leading-[1.2] md:leading-[58px] text-[#191B21]">
-          Elevate Your Events <br /> With Us
+          Your Perfect Event <br /> Starts Here
         </h1>
 
         <p className=" text-sm sm:text-base md:text-[16px] text-gray-600 mt-4 md:mt-6  max-w-md mx-auto lg:mx-0">
-          Effortlessly manage every aspect of your business from a single,
-          powerful platform - overseeing bookings, payments, event schedules,
-          and vendor communications with unmatched control and simplicity.
+          From grand weddings to intimate birthdays, Freaky Chimp connects you with India's most trusted event vendors — all in one place. Browse, book, and celebrate with confidence.
+
         </p>
 
         <ButtonBg

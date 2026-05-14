@@ -1,18 +1,15 @@
 "use client";
 
-import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import home_bg from "../public/assets/home_bg.png";
 
 // import Events from "./components/Events";
 
 import OurEvent from "./components/OurEvent";
-import { ContactUs } from "./components/ContactUs";
 
 import FAQ from "./components/FAQ";
 
 import JoinUs from "./components/JoinUS";
-import WhoWe from "./components/WhoWe";
 import Image1 from "./components/Image1";
 import Events from "./components/Events";
 import Image from "next/image";
@@ -49,7 +46,6 @@ export default function Home() {
           <JoinUs />
           <FAQ />
         </div>
-
 
         {/* 
         <WhoWe />

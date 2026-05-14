@@ -126,9 +126,8 @@ export default function ContactPage() {
                         Contact us
                     </h1>
                     <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto">
-                        Contact the ClickHouse team today for support with all your
-                        real-time analytics and data management needs. We would love
-                        to hear from you.
+                        Have a question, need support, or want to learn more about listing your services on Freaky Chimp? Our team is ready to help. Fill in the form below and we'll get back to you promptly.
+
                     </p>
                 </div>
 
@@ -295,12 +294,7 @@ export default function ContactPage() {
 
                     {/* Footer */}
                     <p className="text-xs text-gray-500 text-center">
-                        By registering, you acknowledge that ClickHouse will
-                        process your personal information in accordance with our
-                        <Link href="/privacy-policy" className="underline cursor-pointer ml-1">
-                            Privacy Policy
-                        </Link>
-                        .
+                        If you're an event professional looking to grow your client base, head over to our vendor portal to get started. It's quick, easy, and free to sign up.
                     </p>
                 </form>
             </div>

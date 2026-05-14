@@ -5,38 +5,32 @@ const eventData = [
   {
     img: usertesting,
     title: "Party",
-    subtitle: "Celebrate every little moment",
-    desc: "  Give your team members access to this project and start collaborating in real time",
+    subtitle: "Celebrate every unforgettable moment",
   },
   {
     img: usertesting,
     title: "Concert",
-    subtitle: "Night full of energy",
-    desc: "  Give your team members access to this project and start collaborating in real time",
+    subtitle: "Feel the live energy",
   },
   {
     img: usertesting,
     title: "Birthday",
-    subtitle: "Celebrate your special day",
-    desc: "  Give your team members access to this project and start collaborating in real time",
+    subtitle: "Make birthdays extra special",
   },
   {
     img: usertesting,
     title: "Marriage",
-    subtitle: "Beginning of forever together",
-    desc: "  Give your team members access to this project and start collaborating in real time",
+    subtitle: "Beginning forever together beautifully",
   },
   {
     img: usertesting,
     title: "Decor",
-    subtitle: "Transforming spaces with creativity",
-    desc: "  Give your team members access to this project and start collaborating in real time",
+    subtitle: "Creative spaces, stunning vibes",
   },
   {
     img: usertesting,
     title: "Baby Shower",
-    subtitle: "Celebrating new beginnings",
-    desc: "  Give your team members access to this project and start collaborating in real time",
+    subtitle: "Celebrating joyful new beginnings",
   },
 ];
 
@@ -46,9 +40,7 @@ const OurEvent = () => {
       <div className="flex flex-col text-center max-w-5xl mx-auto gap-3 pt-12  ">
         <h1 className=" text-4xl max-sm:text-2xl font-bold">Our Events</h1>
         <p className="max-w-2xl mx-auto text-center text-gray-700">
-          We provide seamless, reliable, and user-centric services designed to
-          simplify your journey and enhance your overall experience with modern
-          solutions
+          Life is full of moments worth commemorating. Whether it's an intimate gathering or a grand affair, our vendors are ready to make every occasion unforgettable.
         </p>
       </div>
       <div className="grid grid-cols-1 mt-8 sm:grid-cols-2 lg:grid-cols-3  gap-y-5 gap-x-5 py-4">

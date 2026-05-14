@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, FileText, FolderOpen, Lightbulb, User } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import ButtonBg from "@/components/ButtonBg";
 import Image from "next/image";
 
@@ -10,19 +10,19 @@ const features = [
     icon: <Image src={"/1.svg"} alt="receipt" className=" h-9 w-auto" width={30} height={30} />,
     title: "Manage Services",
     description:
-      "Snap and categorize receipts in seconds and link your bank account.",
+      "Browse, compare, and book catering, décor, photography, entertainment, and more. Every service you need, curated and verified.",
   },
   {
     icon: <Image src={"/2.svg"} alt="lightbulb" className=" h-9 w-auto" width={30} height={30} />,
     title: "Streamline Bookings",
     description:
-      "Set up payroll and bonuses for all your employees, and never be late on salaries.",
+      "Real-time availability, instant confirmations, and a seamless booking flow mean your event planning moves at the speed you need.",
   },
   {
     icon: <Image src={"/3.svg"} alt="file" className=" h-9 w-auto" width={30} height={30} />,
     title: "Complete Visibility",
     description:
-      "Get real-time visibility into every expense and payment, with a neat dashboard.",
+      "From vendor confirmations to payment status — your personalised dashboard gives you complete visibility into every step of your event journey.",
   },
 ];
 
@@ -33,12 +33,11 @@ const Events = () => {
       <div className="">
         <div className="text-center mb-12 max-w-5xl mx-auto">
           <h1 className="text-3xl md:text-4xl max-sm:mt-5 font-bold">
-            Manage Your Event Service With Ease
+            One Platform. Endless Possibilities
           </h1>
           <p className=" max-w-2xl mx-auto text-center text-gray-500 mt-4">
-            Cryptocurrency adoption is at less than 1% of the global world
-            population with some countries and entities actively fighting
-            against its mass adoption.
+            Planning an event shouldn't feel like a second job. Freaky Chimp brings all the tools, vendors, and services you need under one roof — so you can focus on the moments that matter.
+
           </p>
         </div>
 
@@ -47,7 +46,9 @@ const Events = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <div className="border-2  md:col-span-2 group border-orange-300 rounded-2xl p-10 shadow-sm bg-white">
                 <h2 className=" text-xl md:text-3xl font-bold ">
-                  Management software <br /> that handles it all.
+                  Everything You Need to Plan
+                  <br />
+                  Book & Celebrate.
                 </h2>
 
                 <ButtonBg className=" cursor-pointer duration-100 px-6 py-5  mt-6">
@@ -60,8 +61,7 @@ const Events = () => {
                 <Image src={"/4.svg"} alt="receipt" className=" h-9 w-auto" width={30} height={30} />
                 <h3 className="text-xl font-semibold ">Easy Invoicing</h3>
                 <p className="text-gray-600 text-sm">
-                  Automate recurring invoices and save time by using pre-built
-                  templates. Get paid on time.
+                  No more chasing paperwork. Vendors on our platform send automated, professional invoices.
                 </p>
               </div>
             </div>
