@@ -3,22 +3,22 @@ import usertesting from "../../public/ajay.jpg";
 
 const eventData = [
   {
-    img: usertesting,
+    img: "/party.jpeg",
     title: "Party",
     subtitle: "Celebrate every unforgettable moment",
   },
   {
-    img: usertesting,
+    img: "/concert.jpeg",
     title: "Concert",
     subtitle: "Feel the live energy",
   },
   {
-    img: usertesting,
+    img: "/birthday.png",
     title: "Birthday",
     subtitle: "Make birthdays extra special",
   },
   {
-    img: usertesting,
+    img: "/merriage.jpeg",
     title: "Marriage",
     subtitle: "Beginning forever together beautifully",
   },
@@ -28,7 +28,7 @@ const eventData = [
     subtitle: "Creative spaces, stunning vibes",
   },
   {
-    img: usertesting,
+    img: "/baby-show.jpeg",
     title: "Baby Shower",
     subtitle: "Celebrating joyful new beginnings",
   },
@@ -48,10 +48,10 @@ const OurEvent = () => {
           <div key={index} className="relative group">
             <div>
               <div className="overflow-hidden rounded">
-                <Image className="group-hover:scale-105 duration-200" src={item.img} alt={item.title} />
+                <Image width={300} height={300} className="group-hover:scale-105 h-72 object-cover w-full duration-200" src={item.img} alt={item.title} />
               </div>
             </div>
-            <div className="absolute w-full px-6 z-20 text-white -bottom-3 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute w-full px-6 z-20 text-white bg-linear-0 from-black to-black/0 pb-3 bottom-0 left-1/2 -translate-x-1/2">
               <div>
                 <p className=" text-xl  font-bold">{item.title}</p>
                 <p className=" font-medium">{item.subtitle}</p>

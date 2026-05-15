@@ -1,4 +1,5 @@
 import ButtonBg from "@/components/ButtonBg";
+import Image from "next/image";
 import React from "react";
 
 const AboutUs = () => {
@@ -42,8 +43,10 @@ const AboutUs = () => {
             </p>
           </div>
 
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+          <Image
+            src="/team-building-scaled.jpg.jpeg"
+            width={300}
+            height={400}
             alt=""
             className="rounded-sm w-full h-80 object-cover"
           />

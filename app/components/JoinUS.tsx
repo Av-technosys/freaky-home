@@ -18,12 +18,12 @@ const JoinUs = () => {
         <h2 className="text-3xl max-sm:text-2xl font-bold  ">
           Join us, Become a <br /> Vendor!
         </h2>
-        <div className="flex justify-between items-center gap-5">
+        <div className="flex justify-between flex-col md:flex-row items-center gap-5">
           <p className="max-w-md text-shadow-lg">
             Thousands of vendors are using Eventors to showcase their services
             and get more business than ever before.
           </p>
-          <ButtonBg className=" h-11 px-6 rounded-full text-lg py-3">
+          <ButtonBg className=" w-full md:w-fit h-11 px-6 rounded-full text-lg py-3">
             Start Here
           </ButtonBg>
         </div>
